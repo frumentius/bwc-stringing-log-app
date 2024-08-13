@@ -1,0 +1,19 @@
+.container-icon {
+    background-color: var(--md-sys-color-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.racket-icon {
+    width: 23px;
+    height: 23px;
+
+    polygon,
+    path {
+        fill: var(--md-sys-color-on-primary);;
+    }
+}

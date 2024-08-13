@@ -1,0 +1,73 @@
+.card {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 720px;
+    overflow: hidden;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        >* {
+            min-height: 80px;
+            box-sizing: border-box;
+        }
+
+        &__icon,
+        &__header,
+        &__action {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__icon,
+        &__action {
+            align-items: center;
+            text-align: center;
+        }
+
+        &__icon {
+            padding-left: 1rem;
+        }
+
+        &__header {
+            flex: 1;
+            padding: 1rem;
+
+        }
+
+        &__action {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
+        &__status-error, &__status-success, &__status-on-progress{
+            min-width: 81px;
+        }
+        &__status-error {
+            background-color: var(--md-sys-color-error-container);
+            color: var(--md-sys-color-on-error-container);
+        }
+
+        &__status-success {
+            background-color: var(--md-sys-color-tertiary-container);
+            color: var(--md-sys-color-on-tertiary-container);
+        }
+
+        &__status-on-progress {
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+        }
+    }
+}
+
+.card.card-outlined {
+    background-color: var(--md-sys-color-surface);
+    border: solid 1px var(--md-sys-color-outline-variant);
+}
+
+.card.card-filled {
+    background-color: var(--md-sys-color-surface-container-highest);
+}

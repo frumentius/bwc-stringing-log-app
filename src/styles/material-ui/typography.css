@@ -1,0 +1,40 @@
+:root {
+  font-family: "Roboto", "Open Sans", sans-serif, system-ui;
+  --md-ref-typeface-plain: "Roboto";
+  --md-ref-typeface-brand: "Open Sans";
+  --md-icon-font: "Material Symbols Outlined";
+  --catalog-display-xl-font-size: 88px;
+  --catalog-display-m-font-size: 45px;
+  --catalog-title-l-font-size: 22px;
+  --catalog-title-m-font-size: 16px;
+  --catalog-title-s-font-size: 14px;
+  --catalog-body-l-font-size: 16px;
+  --catalog-body-m-font-size: 14px;
+  --catalog-headline-s-font-size: 24px;
+  --catalog-label-s-font-size: 11px;
+  --catalog-shape-xl: 28px;
+  --catalog-shape-l: 16px;
+  --catalog-shape-m: 12px;
+  --catalog-shape-s: 8px;
+  --catalog-shape-xs: 4px;
+  --catalog-spacing-xl: 28px;
+  --catalog-spacing-l: 16px;
+  --catalog-spacing-m: 12px;
+  --catalog-spacing-s: 8px;
+  --catalog-top-app-bar-height: calc(48px + 2 * var(--catalog-spacing-m));
+  scroll-padding-block-start: calc(
+    var(--catalog-top-app-bar-height) + var(--catalog-top-app-bar-padding-block) *
+      2
+  );
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --catalog-display-xl-font-size: 55px;
+    --catalog-title-l-font-size: 16px;
+    --catalog-body-l-font-size: 14px;
+    --catalog-body-m-font-size: 12px;
+    --catalog-spacing-xl: 16px;
+    --catalog-spacing-l: 12px;
+  }
+}

@@ -1,0 +1,10 @@
+@import "./tailwind.css";
+@import "./material-ui.scss";
+@import "./var.scss";
+
+body {
+    background-color: var(--md-sys-color-surface-container);
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    padding: 0;
+}
