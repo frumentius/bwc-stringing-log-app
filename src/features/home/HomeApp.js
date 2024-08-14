@@ -10,7 +10,7 @@ const toggleTheme = () => {
   else document.body.className = "light";
 };
 
-const data_increment = 5;
+const data_increment = 8;
 
 const HomeApp = () => {
   const [label, setLabel] = useState("New restring order");
@@ -36,9 +36,10 @@ const HomeApp = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
-      let scrollableHeight = document.documentElement.scrollHeight - window.innerHeight -3;
+      let scrollableHeight = document.documentElement.scrollHeight - window.innerHeight - 1;
       if (scrollableHeight < 0) scrollableHeight = 0;
 
+      //console.log(currentScroll, scrollableHeight);
       if (
         currentScroll >= scrollableHeight &&
         !loading

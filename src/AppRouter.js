@@ -5,13 +5,15 @@ const HomeApp = lazy(() => import("./features/home/HomeApp.js"));
 
 const AppRouter = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route path="/">
-          <Route index element={<HomeApp />} />
-        </Route>
-      </Routes>
-    </Suspense>
+    <div className="min-h-screen pb-17">
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/">
+            <Route index element={<HomeApp />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </div>
   );
 };
 

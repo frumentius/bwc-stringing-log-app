@@ -45,7 +45,7 @@ const Search = ({ increment, setData, setLoading, setKeywords, setLimit }) => {
         </div>
         <input
           type="text"
-          placeholder="Search id, name, or phone number"
+          placeholder="Search ref. no., name, or phone number"
           className="md-typescale-body-large"
           onChange={handleParamChange}
           value={param}
