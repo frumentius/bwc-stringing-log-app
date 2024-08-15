@@ -1,7 +1,6 @@
 .card {
     border-radius: 12px;
     width: 100%;
-    max-width: 720px;
     overflow: hidden;
 
     &__top {
@@ -28,26 +27,22 @@
         &__action {
             align-items: center;
             text-align: center;
-        }
-
-        &__icon {
+            padding-right: 1rem;
             padding-left: 1rem;
         }
 
         &__header {
             flex: 1;
-            padding: 1rem;
+            padding: 1rem 1rem 1rem 0;
 
         }
 
-        &__action {
-            padding-right: 1rem;
-            padding-left: 1rem;
-        }
-
-        &__status-error, &__status-success, &__status-on-progress{
+        &__status-error,
+        &__status-success,
+        &__status-on-progress {
             min-width: 81px;
         }
+
         &__status-error {
             background-color: var(--md-sys-color-error-container);
             color: var(--md-sys-color-on-error-container);
@@ -72,4 +67,26 @@
 
 .card.card-filled {
     background-color: var(--md-sys-color-surface-container-highest);
+}
+
+.light .card.interactive.card-filled:hover, .light .card.interactive.card-outlined:hover {
+    background-image: linear-gradient(rgba(30, 28, 19, 0.08), rgba(30, 28, 19, 0.08));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.light .card.interactive.card-filled:active, .light .card.interactive.card-outlined:active {
+    background-image: linear-gradient(rgba(30, 28, 19, 0.1), rgba(30, 28, 19, 0.1));
+    box-shadow: none;
+    margin: 1px 0 0 1px;
+}
+
+.dark .card.interactive.card-filled:hover, .dark .card.interactive.card-outlined:hover {
+    background-image: linear-gradient(rgba(232, 226, 212, 0.08), rgba(232, 226, 212, 0.08));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark .card.interactive.card-filled:active, .dark .card.interactive.card-outlined:active {
+    background-image: linear-gradient(rgba(232, 226, 212, 0.1), rgba(232, 226, 212, 0.1));
+    box-shadow: none;
+    margin: 1px 0 0 1px;
 }

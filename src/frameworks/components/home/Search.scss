@@ -62,3 +62,19 @@
         }
     }
 }
+
+.light .search:hover, .light .search:focus{
+    input,
+    .leading-icon,
+    .trailing-icon {
+        background-image: linear-gradient(rgba(30, 28, 19, 0.08), rgba(30, 28, 19, 0.08));
+    }
+}
+
+.dark .search:hover, .dark .search:focus{
+    input,
+    .leading-icon,
+    .trailing-icon {
+        background-image: linear-gradient(rgba(232, 226, 212, 0.08), rgba(232, 226, 212, 0.08));
+    }
+}

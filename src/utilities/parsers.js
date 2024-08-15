@@ -28,3 +28,13 @@ export const objectToURLSearchParams = (data, exception = [], only = []) => {
   });
   return post_form_data;
 };
+
+export const date2Format = (param_date) => {
+  return (
+    param_date.getDate().toString().padStart(2, "0") +
+    "/" +
+    (param_date.getMonth() + 1).toString().padStart(2, "0") +
+    "/" +
+    param_date.getFullYear()
+  );
+};

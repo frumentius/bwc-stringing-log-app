@@ -8,21 +8,6 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./styles/global.scss";
 
-const themeColor = document.querySelector('meta[name="theme-color"]');
-
-const updateThemeColor = (isDark) => {
-  themeColor.setAttribute("content", isDark ? "#222017" : "#f4eddf");
-
-  if (isDark) document.body.className = "dark";
-  else document.body.className = "light";
-};
-
-const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-updateThemeColor(darkModeMediaQuery.matches);
-darkModeMediaQuery.addEventListener("change", (e) => {
-  updateThemeColor(e.matches);
-});
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

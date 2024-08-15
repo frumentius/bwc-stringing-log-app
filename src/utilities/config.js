@@ -6,8 +6,9 @@ export const RECAPTCHA_SITEKEY = "6Ld0FCkTAAAAAKT5zY1P6F2K7pUzPpUskzkIZ7uD"; //l
 
 export const KNOWN_BRAND = ['ashaway', 'babolat', 'gosen', 'li-ning', 'victor', 'wilson', 'yonex'];
 export const STATUS = [
-    { string: 'error', icon: 'close', text: 'Cancelled'},
+    { string: 'error', icon: 'close', text: 'Canceled'},
     { string: 'on-progress', icon: 'hourglass_top', text: <>On<br/>progress</>},
     { string: 'on-progress', icon: 'hourglass_bottom', text: <>On<br/>progress</>},
     { string: 'success', icon: 'check', text: 'Done'},
+    { string: 'success', icon: 'done_all', text: 'Picked up'},
 ];

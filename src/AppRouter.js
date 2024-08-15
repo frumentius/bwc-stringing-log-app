@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
 const HomeApp = lazy(() => import("./features/home/HomeApp.js"));
+const DetailsApp = lazy(() => import("./features/details/DetailsApp.js"));
 
 const AppRouter = () => {
   return (
@@ -10,6 +11,7 @@ const AppRouter = () => {
         <Routes>
           <Route path="/">
             <Route index element={<HomeApp />} />
+            <Route path="details" element={<DetailsApp />} />
           </Route>
         </Routes>
       </Suspense>

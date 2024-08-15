@@ -31,3 +31,7 @@ export const isEmptyObject = (object) => {
   }
   return is_empty;
 };
+
+export const isReceiptNumber = (str) => {
+  return /^#?\d+$/.test(str);
+}
