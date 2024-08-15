@@ -11,17 +11,17 @@ const TimelineList = ({ overline, headline, supportingText }) => {
     <div className="relative py-3 px-4">
       <div className="timeline__bullet"></div>
       {overline && (
-        <div className="md-typescale-label-medium md-color-on-surface-variant">
+        <div className="md-typescale-label-large md-color-on-surface-variant">
           {overline}
         </div>
       )}
       {headline && (
-        <div className="md-typescale-body-medium">
+        <div className="md-typescale-body-large">
           <strong>{headline}</strong>
         </div>
       )}
       {supportingText && (
-        <div className="md-typescale-label-medium">{supportingText}</div>
+        <div className="md-typescale-label-large">{supportingText}</div>
       )}
     </div>
   );
@@ -30,7 +30,7 @@ const TimelineList = ({ overline, headline, supportingText }) => {
 const StatusProgress = ({ state }) => {
   let status_date = new Date(state[0]);
   let status_progress = [];
-  
+
   status_progress.push(
     <TimelineList
       key="created"
@@ -77,10 +77,10 @@ const StatusProgress = ({ state }) => {
 
   return (
     <>
-      <div className="md-typescale-headline-small grow mt-5 mb-4">
-        Status progress
+      <div className="py-4">
+        <div className="md-typescale-title-small md-color-primary">Status progress</div>
       </div>
-      <div className="mb-8">
+      <div className="py-4">
         <Card
           variant="outlined"
           body={<div className="timeline">{status_progress}</div>}

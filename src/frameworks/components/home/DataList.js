@@ -20,7 +20,7 @@ const DataList = ({ param = "", data = null, limit = 10 }) => {
       );
     else {
       return_elem = [
-        <div className="result-list-item mx-auto" key={0}>
+        <div className="md-typescale-title-small md-color-primary result-list-item mx-auto" key={0}>
           Results for "{param}"
         </div>,
       ];
@@ -57,7 +57,7 @@ const DataList = ({ param = "", data = null, limit = 10 }) => {
         return_elem.push(
           <Link
             to="/details"
-            className="result-list-item cursor-pointer mx-auto mb-4"
+            className="result-list-item cursor-pointer mx-auto my-5 block"
             state={data[i]}
             key={i + 1}
           >
@@ -79,7 +79,7 @@ const DataList = ({ param = "", data = null, limit = 10 }) => {
                         {data[i][11]}
                       </strong>
                     </div>
-                    <div className="md-typescale-label-small md-color-on-surface-variant">
+                    <div className="md-typescale-label-medium md-color-on-surface-variant">
                       {status_date.getDate().toString().padStart(2, "0") +
                         "/" +
                         (status_date.getMonth() + 1)
@@ -87,7 +87,7 @@ const DataList = ({ param = "", data = null, limit = 10 }) => {
                           .padStart(2, "0")}
                     </div>
                   </div>
-                  <div className="md-typescale-body-small">
+                  <div className="md-typescale-label-large">
                     {data[i][5]} - {data[i][20].slice(0, 3)}***
                     {data[i][20].slice(-3)}
                   </div>
@@ -99,7 +99,7 @@ const DataList = ({ param = "", data = null, limit = 10 }) => {
                   <md-icon slot="icon">
                     {CONFIG.STATUS[status_idx].icon}
                   </md-icon>
-                  <div className="md-typescale-label-small">
+                  <div className="md-typescale-label-medium">
                     {CONFIG.STATUS[status_idx].text}
                   </div>
                 </>

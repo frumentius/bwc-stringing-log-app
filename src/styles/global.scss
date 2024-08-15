@@ -17,6 +17,18 @@ body {
     margin-left: -0.75rem;
 }
 
+.md-color-primary {
+    color: var(--md-sys-color-primary);
+}
+
 .md-color-on-surface-variant {
     color: var(--md-sys-color-on-surface-variant);
+}
+
+.md-background-color-surface-container {
+    background-color: var(--md-sys-color-surface-container);
+}
+
+.md-background-color-surface-container-highest {
+    background-color: var(--md-sys-color-surface-container-highest);
 }

@@ -23,35 +23,40 @@ const CustomerInfo = ({ state }) => {
     payment_status = "UNPAID";
   else if (isReceiptNumber(payment_status)) payment_status = "PAID";
   return (
-    <div>
-      <div className="py-3">
+    <>
+      <div className="py-4">
+        <div className="md-typescale-title-small md-color-primary">
+          Basic info
+        </div>
+      </div>
+      <div className="py-4">
         <div className="md-typescale-title-large">Name</div>
         <div className="md-typescale-body-large">{state[5]}</div>
       </div>
-      <div className="py-3">
+      <div className="py-4">
         <div className="md-typescale-title-large">Phone number</div>
         <div className="md-typescale-body-large">
           {state[20].slice(0, 3)}***
           {state[20].slice(-3)}
         </div>
       </div>
-      <div className="py-3">
+      <div className="py-4">
         <div className="md-typescale-title-large">Racket</div>
         <div className="md-typescale-body-large">
           {state[10].trim()} - {state[11]}
         </div>
       </div>
-      <div className="py-3">
+      <div className="py-4">
         <div className="md-typescale-title-large">String</div>
         <div className="md-typescale-body-large">
           {state[12]} - {state[13].trim()} ({state[15]}lbs)
         </div>
       </div>
-      <div className="py-3">
+      <div className="py-4">
         <div className="md-typescale-title-large">Payment status</div>
         <div className="md-typescale-body-large">{payment_status}</div>
       </div>
-      <div className="py-3">
+      <div className="py-4">
         <div className="md-typescale-title-large">Due date</div>
         <div className="md-typescale-body-large">
           {due_date.getDate()}&nbsp;
@@ -60,12 +65,12 @@ const CustomerInfo = ({ state }) => {
         </div>
       </div>
       {state[19] && (
-        <div className="py-3">
+        <div className="py-4">
           <div className="md-typescale-title-large">Notes</div>
           <div className="md-typescale-body-large">{state[19]}</div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

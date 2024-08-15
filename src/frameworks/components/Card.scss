@@ -40,7 +40,7 @@
         &__status-error,
         &__status-success,
         &__status-on-progress {
-            min-width: 81px;
+            min-width: 75px;
         }
 
         &__status-error {
@@ -70,23 +70,23 @@
 }
 
 .light .card.interactive.card-filled:hover, .light .card.interactive.card-outlined:hover {
-    background-image: linear-gradient(rgba(30, 28, 19, 0.08), rgba(30, 28, 19, 0.08));
+    background-image: linear-gradient(rgba(108, 94, 16, 0.08), rgba(108, 94, 16, 0.08));
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .light .card.interactive.card-filled:active, .light .card.interactive.card-outlined:active {
-    background-image: linear-gradient(rgba(30, 28, 19, 0.1), rgba(30, 28, 19, 0.1));
+    background-image: linear-gradient(rgba(108, 94, 16, 0.1), rgba(108, 94, 16, 0.1));
     box-shadow: none;
     margin: 1px 0 0 1px;
 }
 
 .dark .card.interactive.card-filled:hover, .dark .card.interactive.card-outlined:hover {
-    background-image: linear-gradient(rgba(232, 226, 212, 0.08), rgba(232, 226, 212, 0.08));
+    background-image: linear-gradient(rgba(217, 199, 111, 0.08), rgba(217, 199, 111, 0.08));
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .dark .card.interactive.card-filled:active, .dark .card.interactive.card-outlined:active {
-    background-image: linear-gradient(rgba(232, 226, 212, 0.1), rgba(232, 226, 212, 0.1));
+    background-image: linear-gradient(rgba(217, 199, 111, 0.1), rgba(217, 199, 111, 0.1));
     box-shadow: none;
     margin: 1px 0 0 1px;
 }
