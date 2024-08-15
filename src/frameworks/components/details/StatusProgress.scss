@@ -1,0 +1,23 @@
+.timeline {
+    margin-left: 1.5rem;
+    border-left: solid 1px var(--md-sys-color-on-surface-variant);
+    position: relative;
+
+    &__bullet {
+        display: block;
+        box-sizing: border-box;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--md-sys-color-on-surface-variant);
+        outline: solid 1px var(--md-sys-color-on-surface-variant);
+        border: solid 2px var(--md-sys-color-surface);
+        border-radius: 50%;
+        position: absolute;
+        top: 1rem;
+        left: -0.4rem;
+    }
+
+    * {
+        overflow: visible !important;
+    }
+}
