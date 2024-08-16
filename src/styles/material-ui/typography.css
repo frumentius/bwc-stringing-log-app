@@ -1,4 +1,5 @@
 :root {
+  font-size: 14px;
   font-family: "Roboto", "Open Sans", sans-serif, system-ui;
   --md-ref-typeface-plain: "Roboto";
   --md-ref-typeface-brand: "Open Sans";

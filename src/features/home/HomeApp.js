@@ -6,6 +6,7 @@ import DataList from "../../frameworks/components/home/DataList";
 import "./HomeApp.scss";
 
 const data_increment = 5;
+const search_class_scrolled = "fixed w-screen top-0 left-0 p-4 md-background-color-surface-container";
 
 const HomeApp = () => {
   const [label, setLabel] = useState("New restring order");
@@ -13,6 +14,7 @@ const HomeApp = () => {
   const [limit, setLimit] = useState(0);
   const [loading, setLoading] = useState(false);
   const [keywords, setKeywords] = useState("");
+  const [sClass, setSClass] = useState("");
 
   const loadMore = (passedData, passedLimit) => {
     let data_length = 0;
@@ -35,12 +37,15 @@ const HomeApp = () => {
         document.documentElement.scrollHeight - window.innerHeight - 1;
       if (scrollableHeight < 0) scrollableHeight = 0;
 
-      //console.log(currentScroll, scrollableHeight);
+      console.log(currentScroll, scrollableHeight);
       if (currentScroll >= scrollableHeight && !loading) {
         loadMore(data, limit);
       }
       if (currentScroll > 16 && label !== "") setLabel("");
       if (currentScroll <= 16 && label === "") setLabel("New restring order");
+
+      if (currentScroll <= 145 && sClass !== "") setSClass("");
+      if (currentScroll > 145 && sClass === "") setSClass(search_class_scrolled);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -49,19 +54,22 @@ const HomeApp = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [loading, data, limit, label]);
+  }, [loading, data, limit, label, sClass]);
 
   return (
     <>
       <div className="md:container md:mx-auto mx-4">
-        <div className="md-typescale-headline-large py-6">Search</div>
-        <Search
-          increment={data_increment}
-          setData={setData}
-          setLoading={setLoading}
-          setKeywords={setKeywords}
-          setLimit={setLimit}
-        />
+        <div className="md-typescale-headline-large pt-28 pb-8">Search</div>
+        <div className={sClass}>
+          <Search
+            increment={data_increment}
+            setData={setData}
+            setLoading={setLoading}
+            setKeywords={setKeywords}
+            setLimit={setLimit}
+          />
+        </div>
+        <div className={sClass ? "filler-h-48 block" : "filler-h-48 hidden"}></div>
         <DataList param={keywords} data={data} limit={limit} />
         {loading && (
           <md-circular-progress

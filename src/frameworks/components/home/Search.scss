@@ -3,7 +3,7 @@
     align-items: center;
     width: 100%;
     max-width: 720px;
-    height: 56px;
+    height: 48px;
 
     input,
     .leading-icon,
@@ -16,8 +16,8 @@
         color: var(--md-sys-color-on-surface);
         outline: none;
         border: none;
-        height: 56px;
-        padding: 0 16px;
+        height: 48px;
+        padding: 0 1rem;
         flex: 1;
     }
 
@@ -30,8 +30,8 @@
 
     input:first-child,
     .leading-icon {
-        border-top-left-radius: 28px;
-        border-bottom-left-radius: 28px;
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
     }
 
     input:last-child,
@@ -45,15 +45,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 56px;
+        height: 48px;
     }
 
     .leading-icon {
-        padding-left: 16px;
+        padding-left: 1rem;
     }
 
     .trailing-icon {
-        padding-right: 16px;
+        padding-right: 1rem;
 
         .avatar {
             width: 30px;
