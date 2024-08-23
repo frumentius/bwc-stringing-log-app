@@ -28,23 +28,23 @@
       "src": "assets/images/screen/portrait1.png",
       "sizes": "540x960",
       "type": "image/png",
-      "form_factor": "handset"
+      "form_factor": "narrow"
     },
     {
       "src": "assets/images/screen/portrait2.png",
       "sizes": "540x960",
       "type": "image/png",
-      "form_factor": "handset"
+      "form_factor": "narrow"
     },
     {
       "src": "assets/images/screen/wide1.png",
-      "sizes": "540x960",
+      "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
       "src": "assets/images/screen/wide2.png",
-      "sizes": "540x960",
+      "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
     }
