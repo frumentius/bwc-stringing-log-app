@@ -28,7 +28,9 @@ const TimelineList = ({ overline, headline, supportingText }) => {
 };
 
 const StatusProgress = ({ state }) => {
-  let status_date = new Date(state[0]);
+  let status_date = state[0];
+  if(!status_date) status_date = state[6];
+  status_date = new Date(status_date);
   let status_progress = [];
 
   status_progress.push(

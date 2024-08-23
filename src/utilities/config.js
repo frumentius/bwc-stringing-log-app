@@ -4,7 +4,7 @@ export const BACK_END_URL = "https://be.";
 export const RECAPTCHA_SITEKEY = "6Ld0FCkTAAAAAKT5zY1P6F2K7pUzPpUskzkIZ7uD"; //localhost
 //export const RECAPTCHA_SITEKEY = "6LflGHYiAAAAAGC1KF21QWZTAOPhxqQ2023VTA8E"; //live
 
-export const KNOWN_BRAND = ['ashaway', 'astec', 'babolat', 'flypower', 'gosen', 'li-ning', 'victor', 'wilson', 'yonex'];
+export const KNOWN_BRAND = ['ashaway', 'astec', 'babolat', 'flypower', 'gosen', 'lining', 'victor', 'wilson', 'yonex'];
 export const STATUS = [
     { string: 'error', icon: 'close', text: 'Canceled'},
     { string: 'on-progress', icon: 'hourglass_top', text: <>On<br/>progress</>},

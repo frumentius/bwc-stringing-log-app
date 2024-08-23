@@ -33,9 +33,10 @@ const DataList = ({ param = "", data = null, limit = 10 }) => {
       let tech_note, status_date;
 
       for (let i = data_length - 1; i >= data_length - limit; i--) {
-        brand_name = data[i][10].trim().toLowerCase();
+        brand_name = data[i][10].trim().toLowerCase().replace(/[^a-z]/g, '');
         is_known_brand = CONFIG.KNOWN_BRAND.includes(brand_name);
         status_date = data[i][0];
+        if(!status_date) status_date = data[1][6];
         if (data[i][7] && data[i][18]) {
           status_idx = 3;
           status_date = data[i][7];
