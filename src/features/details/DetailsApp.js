@@ -9,7 +9,6 @@ const DetailsApp = () => {
   const { state } = useLocation();
   if (state === null) return <Navigate to="/" />;
   else {
-    console.log(state);
     return (
       <>
         <div className="md:container md:mx-auto mx-4">

@@ -37,7 +37,7 @@ const HomeApp = () => {
         document.documentElement.scrollHeight - window.innerHeight - 1;
       if (scrollableHeight < 0) scrollableHeight = 0;
 
-      console.log(currentScroll, scrollableHeight);
+      /* console.log(currentScroll, scrollableHeight); */
       if (currentScroll >= scrollableHeight && !loading) {
         loadMore(data, limit);
       }
