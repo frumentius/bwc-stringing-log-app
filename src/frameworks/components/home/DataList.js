@@ -40,12 +40,12 @@ const DataList = ({ param = "", data = null, limit = 10 }) => {
         if (data[i][7] && data[i][18]) {
           status_idx = 3;
           status_date = data[i][7];
-          if (data[i][23]) {
+          if (data[i][22]) {
             status_idx = 4;
-            status_date = data[i][23];
+            status_date = data[i][22];
           }
         } else {
-          tech_note = data[i][22].split(":");
+          tech_note = data[i][23].split(":");
           if (tech_note[0].toLowerCase() === "canceled") status_idx = 0;
           else {
             dateTime = new Date(data[i][8]);

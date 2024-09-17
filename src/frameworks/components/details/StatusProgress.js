@@ -40,7 +40,7 @@ const StatusProgress = ({ state }) => {
       headline="Order created"
     />
   );
-  let comment = state[22];
+  let comment = state[23];
   comment = comment.split(":");
   if (comment[0].toLowerCase() === "canceled") {
     status_progress.push(
@@ -61,8 +61,8 @@ const StatusProgress = ({ state }) => {
         supportingText={"Strung by: " + state[18]}
       />
     );
-    if (state[23]) {
-      status_date = new Date(state[23]);
+    if (state[22]) {
+      status_date = new Date(state[22]);
       status_progress.push(
         <TimelineList
           key="picked-up"
