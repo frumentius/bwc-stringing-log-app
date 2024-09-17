@@ -37,7 +37,7 @@ const HomeApp = () => {
         document.documentElement.scrollHeight - window.innerHeight - 1;
       if (scrollableHeight < 0) scrollableHeight = 0;
 
-      console.log(currentScroll, scrollableHeight);
+      /* console.log(currentScroll, scrollableHeight); */
       if (currentScroll >= scrollableHeight && !loading) {
         loadMore(data, limit);
       }
@@ -79,7 +79,7 @@ const HomeApp = () => {
           ></md-circular-progress>
         )}
       </div>
-      <div className="fixed right-4 bottom-4">
+      <div className="fixed right-6 bottom-6">
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSf-eqigXjJJ9q2mtydiRA8fMQLGlr7uRDqb-ohXwfkIQxjhbQ/viewform?usp=sf_link"
           rel="noreferrer"
